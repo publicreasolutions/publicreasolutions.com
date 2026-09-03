@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Publicrea Solutions | Publicidad que se ve, impacto que se siente</title>
+
+    <meta name="description" content="Publicrea Solutions desarrolla soluciones publicitarias, estructuras, publicidad POP, producción gráfica, acrílico, señalética, instalación y mantenimiento.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #292929;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        :root {
+            --negro: #272727;
+            --gris: #555555;
+            --naranja: #f5a623;
+            --amarillo: #ffbd32;
+            --blanco: #ffffff;
+            --gris-claro: #f5f5f5;
+        }
+
+        /* =========================
+           MENU
+        ========================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo-text {
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--negro);
+        }
+
+        .logo-text span {
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--negro);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #e59400;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 13px 23px;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-orange {
+            background: var(--naranja);
+            color: var(--negro);
+        }
+
+        .btn-orange:hover {
+            background: var(--amarillo);
+            transform: translateY(-2px);
+        }
+
+        .btn-dark {
+            background: var(--negro);
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: #444444;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 650px;
+            background:
+                linear-gradient(90deg, rgba(20,20,20,0.90), rgba(20,20,20,0.55), rgba(20,20,20,0.15)),
+                linear-gradient(135deg, #333333, #777777);
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            padding: 80px 25px;
+        }
+
+        .hero small {
+            color: var(--amarillo);
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .hero h1 {
+            max-width: 750px;
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.05;
+            margin: 20px 0;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: var(--amarillo);
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #eeeeee;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================
+           GENERAL
+        ========================== */
+
+        section {
+            padding: 85px 25px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title small {
+            color: #d98b00;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            color: var(--negro);
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 15px auto 0;
+            color: var(--gris);
+        }
+
+        /* =========================
+           NOSOTROS
+        ========================== */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about-text h2 span {
+            color: #e49a00;
+        }
+
+        .about-text p {
+            color: var(--gris);
+            margin-bottom: 15px;
+        }
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .process-card {
+            background: var(--gris-claro);
+            padding: 25px 18px;
+            border-radius: 8px;
+            border-top: 4px solid var(--naranja);
+        }
+
+        .process-card strong {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .process-card p {
+            font-size: 14px;
+        }
+
+        /* =========================
+           SERVICIOS
+        ========================== */
+
+        .services {
+            background: #f7f7f7;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 32px;
+            border-radius: 10px;
+            border: 1px solid #eeeeee;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .service-number {
+            font-size: 13px;
+            color: #d98b00;
+            font-weight: 800;
+        }
+
+        .service-card h3 {
+            font-size: 23px;
+            margin: 10px 0 15px;
+        }
+
+        .service-card p {
+            color: var(--gris);
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .service-card ul {
+            list-style: none;
+        }
+
+        .service-card li {
+            margin-bottom: 7px;
+            color: #444444;
+            font-size: 14px;
+        }
+
+        .service-card li::before {
+            content: "✓";
+            color: #e49a00;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* =========================
+           PROYECTOS
+        ========================== */
+
+        .projects {
+            background: white;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project-card {
+            min-height: 260px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #333333, #777777);
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .project-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+        }
+
+        .project-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .project-content p {
+            font-size: 14px;
+            color: #eeeeee;
+        }
+
+        /* =========================
+           DESTACADO
+        ========================== */
+
+        .featured {
+            background: var(--negro);
+            color: white;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .featured-image {
+            min-height: 430px;
+            border-radius: 12px;
+            background:
+                linear-gradient(135deg, rgba(245,166,35,0.25), rgba(0,0,0,0.1)),
+                #444444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .featured-image span {
+            font-size: 22px;
+            font-weight: bold;
+            color: #dddddd;
+        }
+
+        .featured-text small {
+            color: var(--amarillo);
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .featured-text h2 {
+            font-size: 43px;
+            line-height: 1.1;
+            margin: 15px 0;
+        }
+
+        .featured-text p {
+            color: #cccccc;
+            margin-bottom: 25px;
+        }
+
+        /* =========================
+           POR QUE PUBLICREA
+        ========================== */
+
+        .reasons {
+            background: #f7f7f7;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .reason {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .reason-icon {
+            width: 55px;
+            height: 55px;
+            margin: auto;
+            border-radius: 50%;
+            background: var(--naranja);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: var(--negro);
+            font-size: 22px;
+        }
+
+        .reason h3 {
+            margin: 15px 0 8px;
+        }
+
+        .reason p {
+            color: var(--gris);
+            font-size: 14px;
+        }
+
+        /* =========================
+           CTA
+        ========================== */
+
+        .cta {
+            background: linear-gradient(135deg, #f5a623, #ffbd32);
+            text-align: center;
+            padding: 75px 25px;
+        }
+
+        .cta h2 {
+            font-size: 43px;
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            font-size: 18px;
+        }
+
+        /* =========================
+           CONTACTO
+        ========================== */
+
+        .contact {
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .contact-card {
+            padding: 30px;
+            border: 1px solid #eeeeee;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            color: var(--gris);
+            text-decoration: none;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: var(--negro);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer strong {
+            font-size: 22px;
+        }
+
+        footer p {
+            color: #bbbbbb;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        /* =========================
+           WHATSAPP FLOTANTE
+        ========================== */
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 2000;
+            background: #25D366;
+            color: white;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .services-grid,
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid,
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reasons-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 65px 18px;
+            }
+
+            .nav {
+                padding: 13px 18px;
+            }
+
+            .nav .btn {
+                padding: 10px 14px;
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero-content {
+                padding: 60px 18px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .section-title h2,
+            .about-text h2,
+            .featured-text h2,
+            .cta h2 {
+                font-size: 32px;
+            }
+
+            .services-grid,
+            .project-grid,
+            .contact-grid,
+            .reasons-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process {
+                grid-template-columns: 1fr;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="nav">
+
+        <div class="logo-text">
+            Publicrea <span>Solutions</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+        <a class="btn btn-orange"
+           href="https://wa.me/51978769169?text=Hola%20Publicrea%20Solutions,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n."
+           target="_blank">
+            COTIZA AHORA
+        </a>
+
+    </nav>
+</header>
+
+
+<main>
+
+<!-- =========================
+     INICIO
+========================== -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <small>PUBLICREA SOLUTIONS</small>
+
+        <h1>
+            Publicidad que se ve,
+            <span>impacto que se siente.</span>
+        </h1>
+
+        <p>
+            Soluciones publicitarias para marcas, empresas
+            y espacios comerciales.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#servicios" class="btn btn-orange">
+                VER NUESTROS SERVICIOS
+            </a>
+
+            <a href="https://wa.me/51978769169?text=Hola%20Publicrea%20Solutions,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n."
+               target="_blank"
+               class="btn btn-dark">
+                SOLICITAR COTIZACIÓN
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NOSOTROS
+========================== -->
+
+<section class="about" id="nosotros">
+
+    <div class="container about-grid">
+
+        <div class="about-text">
+
+            <small style="color:#d98b00;font-weight:bold;">
+                PUBLICREA SOLUTIONS
+            </small>
+
+            <h2>
+                Hacemos realidad tus
+                <span>proyectos publicitarios.</span>
+            </h2>
+
+            <p>
+                Desarrollamos soluciones publicitarias adaptadas
+                a las necesidades de cada proyecto.
+            </p>
+
+            <p>
+                Integramos producción gráfica, fabricación de
+                estructuras, publicidad POP, acrílico, señalética,
+                instalación, mantenimiento y renovación.
+            </p>
+
+        </div>
+
+        <div class="process">
+
+            <div class="process-card">
+                <strong>DISEÑAMOS</strong>
+                <p>
+                    Proponemos soluciones adaptadas a las
+                    necesidades de cada proyecto.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <strong>FABRICAMOS</strong>
+                <p>
+                    Elaboramos estructuras y elementos
+                    publicitarios personalizados.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <strong>IMPLEMENTAMOS</strong>
+                <p>
+                    Realizamos instalación, renovación
+                    y mantenimiento.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICIOS
+========================== -->
+
+<section class="services" id="servicios">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>Nuestras soluciones</small>
+
+            <h2>Todo lo que tu marca necesita para hacerse visible</h2>
+
+            <p>
+                Desarrollamos soluciones publicitarias para empresas,
+                marcas, puntos de venta y espacios comerciales.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <div class="service-card">
+
+                <span class="service-number">01</span>
+
+                <h3>Estructuras y publicidad exterior</h3>
+
+                <p>
+                    Soluciones para comunicar y destacar tu marca
+                    en espacios de alta visibilidad.
+                </p>
+
+                <ul>
+                    <li>Estructuras metálicas publicitarias</li>
+                    <li>Paneles publicitarios</li>
+                    <li>Bastidores</li>
+                    <li>Letreros</li>
+                    <li>Corpóreos publicitarios</li>
+                    <li>Móviles publicitarios</li>
+                    <li>Exhibidores metálicos</li>
+                    <li>Estructuras personalizadas</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <span class="service-number">02</span>
+
+                <h3>Publicidad POP y punto de venta</h3>
+
+                <p>
+                    Elementos diseñados para destacar productos,
+                    promociones y marcas.
+                </p>
+
+                <ul>
+                    <li>Counters publicitarios</li>
+                    <li>Displays</li>
+                    <li>Exhibidores</li>
+                    <li>Colgantes</li>
+                    <li>Material POP</li>
+                    <li>Elementos para activaciones</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <span class="service-number">03</span>
+
+                <h3>Producción gráfica</h3>
+
+                <p>
+                    Material gráfico para campañas, promociones
+                    y comunicación visual.
+                </p>
+
+                <ul>
+                    <li>Viniles</li>
+                    <li>Banners</li>
+                    <li>Gigantografías</li>
+                    <li>Afiches</li>
+                    <li>Volantes</li>
+                    <li>Tarjetas de presentación</li>
+                    <li>Stickers</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <span class="service-number">04</span>
+
+                <h3>Acrílico y productos personalizados</h3>
+
+                <p>
+                    Fabricamos piezas funcionales y comerciales
+                    adaptadas a cada necesidad.
+                </p>
+
+                <ul>
+                    <li>Portahojas</li>
+                    <li>Portafolletos</li>
+                    <li>Portalicencias</li>
+                    <li>Ánforas</li>
+                    <li>Porta tarjetas</li>
+                    <li>Porta precios</li>
+                    <li>Exhibidores de acrílico</li>
+                    <li>Productos personalizados</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <span class="service-number">05</span>
+
+                <h3>Señalética</h3>
+
+                <p>
+                    Soluciones de señalización para empresas,
+                    espacios comerciales y diferentes ambientes.
+                </p>
+
+                <ul>
+                    <li>Señalética empresarial</li>
+                    <li>Señalización comercial</li>
+                    <li>Elementos de orientación</li>
+                    <li>Soluciones personalizadas</li>
+                </ul>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <span class="service-number">06</span>
+
+                <h3>Instalación y mantenimiento</h3>
+
+                <p>
+                    Implementamos, renovamos y mantenemos
+                    tus activos publicitarios.
+                </p>
+
+                <ul>
+                    <li>Instalación de publicidad</li>
+                    <li>Instalación en altura</li>
+                    <li>Montaje y desmontaje</li>
+                    <li>Cambio de gráficas</li>
+                    <li>Mantenimiento</li>
+                    <li>Reparaciones</li>
+                    <li>Pintura</li>
+                    <li>Rebranding</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROYECTOS
+========================== -->
+
+<section class="projects" id="proyectos">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>Trabajos realizados</small>
+
+            <h2>Proyectos que hablan por nosotros</h2>
+
+            <p>
+                Una selección de soluciones publicitarias
+                desarrolladas e implementadas por Publicrea Solutions.
+            </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Estructuras publicitarias</h3>
+                    <p>Fabricación e instalación</p>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Publicidad en lona</h3>
+                    <p>Soluciones de gran formato</p>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Bastidores y backing</h3>
+                    <p>Estructuras para comunicación visual</p>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Módulos publicitarios</h3>
+                    <p>Implementación para marcas</p>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Señalética</h3>
+                    <p>Comunicación y orientación visual</p>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Soluciones en acrílico</h3>
+                    <p>Fabricación personalizada</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROYECTO DESTACADO
+========================== -->
+
+<section class="featured">
+
+    <div class="container featured-grid">
+
+        <div class="featured-image">
+
+            <span>
+                Aquí colocaremos una fotografía real
+                de uno de tus proyectos.
+            </span>
+
+        </div>
+
+
+        <div class="featured-text">
+
+            <small>Proyecto destacado</small>
+
+            <h2>
+                Publicidad que destaca
+                a gran escala.
+            </h2>
+
+            <p>
+                Desarrollamos estructuras publicitarias
+                pensadas para generar visibilidad e impacto
+                en espacios comerciales y exteriores.
+            </p>
+
+            <a href="https://wa.me/51978769169?text=Hola%20Publicrea%20Solutions,%20quisiera%20cotizar%20un%20proyecto."
+               target="_blank"
+               class="btn btn-orange">
+                COTIZAR UN PROYECTO
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     POR QUE PUBLICREA
+========================== -->
+
+<section class="reasons">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>¿Por qué Publicrea?</small>
+
+            <h2>Soluciones pensadas para tu proyecto</h2>
+
+        </div>
+
+
+        <div class="reasons-grid">
+
+            <div class="reason">
+
+                <div class="reason-icon">✓</div>
+
+                <h3>Personalización</h3>
+
+                <p>
+                    Adaptamos cada solución a las necesidades
+                    de tu marca y espacio.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="reason-icon">✓</div>
+
+                <h3>Fabricación</h3>
+
+                <p>
+                    Desarrollamos diferentes tipos de estructuras
+                    y elementos publicitarios.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="reason-icon">✓</div>
+
+                <h3>Implementación</h3>
+
+                <p>
+                    Realizamos el montaje e instalación
+                    de tus soluciones publicitarias.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="reason-icon">✓</div>
+
+                <h3>Mantenimiento</h3>
+
+                <p>
+                    Ayudamos a mantener y renovar
+                    tus activos publicitarios.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================== -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            ¿Tienes un proyecto publicitario?
+        </h2>
+
+        <p>
+            Cuéntanos qué necesitas y encontremos
+            juntos la mejor solución para tu marca.
+        </p>
+
+        <a href="https://wa.me/51978769169?text=Hola%20Publicrea%20Solutions,%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios."
+           target="_blank"
+           class="btn btn-dark">
+            HABLAR POR WHATSAPP
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACTO
+========================== -->
+
+<section class="contact" id="contacto">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>Contacto</small>
+
+            <h2>Hablemos de tu próximo proyecto</h2>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <h3>WhatsApp</h3>
+
+                <a href="https://wa.me/51978769169"
+                   target="_blank">
+                    +51 978 769 169
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>Correo electrónico</h3>
+
+                <a href="mailto:administracion@publicreasolutions.com">
+                    administracion@publicreasolutions.com
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>Ubicación</h3>
+
+                <p>
+                    Industrial E-10<br>
+                    San Martín de Porres<br>
+                    Lima, Perú
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <strong>PUBLICREA SOLUTIONS</strong>
+
+    <p>
+        Publicidad que se ve, impacto que se siente.
+    </p>
+
+    <p>
+        © 2026 Publicrea Solutions. Todos los derechos reservados.
+    </p>
+
+</footer>
+
+
+<!-- WHATSAPP FLOTANTE -->
+
+<a class="whatsapp"
+   href="https://wa.me/51978769169?text=Hola%20Publicrea%20Solutions,%20quisiera%20solicitar%20informaci%C3%B3n."
+   target="_blank"
+   aria-label="Contactar por WhatsApp">
+    WA
+</a>
+
+
+</body>
+</html>
